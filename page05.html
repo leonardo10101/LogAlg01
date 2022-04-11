@@ -24,8 +24,8 @@
     <script>
 
         // Login e senha do usuário
-        const loginUsuario = 'léo';
-        const loginSenha = '123';
+        const loginUsuario = 'joca';
+        const loginSenha = '1234';
 
         // Quando clicar em 'id="enviar"'
         enviar.onclick = () => {
@@ -39,20 +39,23 @@
             // Testa se usuário e senha estão corretos
             if (
                 // Primeira expressão
-                formUsuario == loginUsuario
+                formUsuario == loginUsuario //true
 
                 // AND
                 &&
 
                 // Segunda expressão
-                formSenha == loginSenha
+                formSenha == loginSenha //true
             ) {
-                console.log('usuario ok.')
+
+                // Escreve na caixa de mensagem
+                mensagem.innerHTML = `Olá ${formUsuario}! Seja bem-vindo!`;
+
             } else {
-                console.error('oooops!');
+
+                // Escreve na caixa de mensagem
+                mensagem.innerHTML = "Ooops! Algo errado não deu certo!";
             }
-
-
 
             // Não faça mais nada.
             return false;
